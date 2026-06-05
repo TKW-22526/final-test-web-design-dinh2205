@@ -175,10 +175,10 @@ Sinh viên cần nộp đầy đủ các nội dung sau:
 Sinh viên cập nhật thông tin cá nhân tại đây:
 
 ```text
-Họ và tên:
-Mã số sinh viên:
-Lớp:
-Tên đề tài:
-Liên kết GitHub repository:
-Liên kết GitHub Pages:
+Họ và tên: Trần Quốc Đỉnh
+Mã số sinh viên: 110124033
+Lớp: DA24TTA
+Tên đề tài: Thiết kế website bán sách trực tuyến Book Store
+Liên kết GitHub repository: https://github.com/TKW-22526/final-test-web-design-dinh2205
+Liên kết GitHub Pages: https://tkw-22526.github.io/final-test-web-design-dinh2205/
 ```
