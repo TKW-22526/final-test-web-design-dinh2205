@@ -2,10 +2,11 @@
 <html lang="vi">
 
 <head>
-    <title>Chi tiết sản phẩm</title>
+    <title> Chi tiết sản phẩm</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/jpg" href="../assets/LogoTVU.jpg">
     <link rel="stylesheet" href="../css/styleCTSP.css">
-    <script src="../js/libSP.js" ></script>
+    <script src="../js/libSP.js"></script>
 
 </head>
 
@@ -17,7 +18,9 @@
         </div>
 
         <div class="nav-item">
-            <a class="nav-link" href="#">Chi tiết sản phẩm</a>
+            <label for="openCart" class="cart-btn">
+                🛒 Giỏ hàng
+            </label>
         </div>
 
     </nav>
@@ -47,9 +50,73 @@
             <button class="buy-btn">
                 Mua Ngay
             </button>
+
+            <!-- Nút mở -->
+            <label for="openAdd" class="add-btn">
+                Thêm vào giỏ hàng
+            </label>
+
+
         </div>
 
     </div>
+
+    <input type="checkbox" id="openAdd" hidden>
+    <label for="openAdd" class="overlay"> </label>
+
+    <!-- Xác Nhận Thêm Vào Giỏ Hàng -->
+    <div class="box-add">
+
+        <h2>Thêm vào giỏ hàng</h2>
+
+        <p>
+            Bạn có chắc muốn thêm sản phẩm này vào giỏ hàng không?
+        </p>
+
+        <div class="button-group">
+
+            <button class="confirm-btn" id="confirmAdd">
+                Xác nhận
+            </button>
+
+            <label for="openAdd" class="cancel-btn">
+                Hủy
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+
+    <input type="checkbox" id="openCart" hidden>
+
+    <label for="openCart" class="cart-overlay"></label>
+
+    <!-- Tạo Giỏ Hàng -->
+    <div class="cart-box">
+
+        <h2>Giỏ hàng</h2>
+
+        <div id="cart-list">
+
+        </div>
+
+        <h3 id="cart-Tong">
+            Tổng tiền: 0 VND
+        </h3>
+
+        <label for="openCart" class="close-cart">
+            Đóng
+        </label>
+
+        <label for="openCart" class="Buy-cart">
+            Mua hàng
+        </label>
+
+    </div>
+
 
 
     <script>
@@ -58,8 +125,6 @@
         const urlParams = new URLSearchParams(window.location.search);
 
         const productId = Number(urlParams.get("id"));
-
-
         // TÌM SÁCH
         const product = products.find(p => p.id === productId);
 
@@ -77,7 +142,49 @@
 
         }
 
+
+        document.getElementById("confirmAdd").onclick = function () {
+
+            console.log("Đã bấm xác nhận");
+
+            addToCart(productId);
+
+            loadCart();
+
+            alert("Đã thêm vào giỏ hàng!");
+
+            document.getElementById("openAdd").checked = false;
+
+        }
+
     </script>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>Trần Quốc Đỉnh</h3>
+            </div>
+
+            <div class="footer-col">
+                <h3>MSSV: 110124033</h3>
+            </div>
+
+            <div class="footer-col">
+                <h3>DA24TTA - Công Nghệ Thông Tin</h3>
+            </div>
+
+            <div class="footer-col">
+                <h3>Email: quocdinhvta@gmail.com</h3>
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 

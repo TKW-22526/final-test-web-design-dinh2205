@@ -4,29 +4,34 @@
 
 <head>
     <meta charset="utf-8">
-    <title> Peak Book</title>
-    <link rel="stylesheet" href="../css/styleSP.css">
-       <script src="../js/libSP.js"></script>
+    <title>Sản Phẩm </title>
 
+    <link rel="icon" type="image/jpg" href="../assets/LogoTVU.jpg">
+    <link rel="stylesheet" href="../css/styleSP.css">
+    <script src="../js/libSP.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 
 
 <body>
-    
-        <input type="checkbox" id="openLogin" hidden>
+
+    <input type="checkbox" id="openLogin" hidden>
     <header class="header">
         <div class="logo">📚 Book Store</div>
 
         <nav class="menu">
             <a href="../index.html">Trang Chủ</a>
-            <a href="../html/san-pham.html">Sản Phẩm</a>
-            <a href="../html/lien-he.html">Liên Hệ</a>
+
+             <a href="gioi-thieu.html">Giới Thiệu</a>
+
+            <a href="san-pham.html">Sản Phẩm</a>
+
+            <a href="lien-he.html">Liên Hệ</a>
         </nav>
 
-        <label for="openLogin" class="btn-login">Login</label>
+        <label for="openLogin" class="btn-login">Đăng nhập</label>
     </header>
-
 
 
     <div class="login-modal">
@@ -35,7 +40,7 @@
             <!-- nút đóng -->
             <label for="openLogin" class="close-btn">✖</label>
 
-            <form action="action_page.html">
+            <form>
                 <label for="tk">Tài khoản:</label><br>
                 <input type="text" id="tk" name="tk"><br>
 
@@ -53,40 +58,76 @@
         </div>
     </div>
 
+    <input type="checkbox" id="openAddsach" hidden>
 
-    <div id="product-list">
-        
+   <h2 class="section-title">📚 SÁCH MỚI</h2>
+
+    <div class="box-product-list">
+        <div id="product-list"> </div>
+
+        <label for="openAddsach" class="btn-watch" onclick="editId = null">
+
+        Thêm Sách
+
+    </label>
+
     </div>
 
-        <input type="checkbox" id="openAddsach" hidden>
-
-<label for="openAddsach"
-       class="btn-watch"
-       onclick="editId = null">
-
-    Thêm Sách
-
-</label>
-
-<div class="add-modal">
+    <h2 class="section-title">🔥 KHUYẾN MÃI</h2>
+     <div class="box-product-list">
+    <div id="sale-list"></div>
+    </div>
     
-    <div class="add-form">
-        <label for="openAddsach" class="closeadd-btn">✖</label>
 
-        <h1 style="color: white;"> Thêm Sách Mới</h1>
-        <input type="text" id="name" placeholder="Tên sách">
 
-        <input type="number" id="price" placeholder="Giá sách">
 
-        <input type="file" id="img" accept="image/*">
+    <div class="add-modal">
 
-        <textarea id="desc" placeholder="Mô tả sách"></textarea>
+        <div class="add-form">
+            <label for="openAddsach" class="closeadd-btn">✖</label>
 
-        <button class="btn-watchh" onclick="saveProduct()">
-            Thêm sách
-        </button>
+            <h1 style="color: white;"> Thêm Sách Mới</h1>
+            <input type="text" id="name" placeholder="Tên sách">
+
+            <input type="number" id="price" placeholder="Giá sách">
+
+            <input type="file" id="img" accept="image/*">
+
+            <textarea id="desc" placeholder="Mô tả sách"></textarea>
+
+            <button class="btn-watchh" onclick="saveProduct()">
+                Thêm sách
+            </button>
+        </div>
     </div>
-</div>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>Trần Quốc Đỉnh</h3>
+            </div>
+
+            <div class="footer-col">
+                <h3>MSSV: 110124033</h3>
+            </div>
+
+            <div class="footer-col">
+                <h3>DA24TTA - Công Nghệ Thông Tin</h3>
+            </div>
+
+            <div class="footer-col">
+                <h3>Email: quocdinhvta@gmail.com</h3>
+            </div>
+
+        </div>
+
+    </footer>
+
 
 </body>
 
