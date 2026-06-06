@@ -679,6 +679,10 @@ function saveProduct() {
 
     const file = document.getElementById("img").files[0];
 
+    if (file.size > 500000) {
+    alert("Ảnh quá lớn, vui lòng chọn ảnh dưới 500KB");
+    return;
+}
 
     if (name === "" || price === "") {
 
