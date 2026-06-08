@@ -19,14 +19,16 @@ body {
 
 
 
+/* HEADER */
+
 .header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 15px 25px;
     font-size: 16px;
-    font-weight: 1200;
+    font-weight: 1000;
     z-index: 10;
     backdrop-filter: blur(6px);
 
@@ -49,7 +51,7 @@ body {
 .menu {
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 30px;
 }
 
 
@@ -59,6 +61,7 @@ body {
     margin-left: 45px;
     font-size: 22px;
     font-weight: 500;
+
     transition: 0.3s;
 }
 
@@ -94,16 +97,23 @@ body {
 .login-modal {
     position: fixed;
     inset: 0;
+
     background: rgba(0, 0, 0, 0.6);
+
     display: none;
+
     justify-content: center;
     align-items: center;
+
     z-index: 10;
 }
+
+
 
 #openLogin:checked~.login-modal {
     display: flex;
 }
+
 
 .login-box {
     width: 90%;
@@ -115,6 +125,7 @@ body {
     position: relative;
     color: white;
 }
+
 
 /* X đnhap */
 
@@ -128,7 +139,7 @@ body {
 }
 
 
-/* ô tk mk*/
+/* Ô tk mk*/
 
 .login-box input[type="text"],
 .login-box input[type="password"] {
@@ -138,8 +149,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-
-/* Nút submit */
 
 .login-box input[type="submit"] {
 
@@ -157,6 +166,7 @@ body {
     cursor: pointer;
     transition: 0.25s;
 }
+
 
 
 .login-box input:hover {
@@ -180,10 +190,12 @@ body {
 }
 
 
+
 .login-links a {
     color: #2563eb;
     text-decoration: none;
 }
+
 
 
 .login-links a:hover {
@@ -573,13 +585,11 @@ body {
 
     display: flex;
     align-items: center;
-
     justify-content: space-between;
 }
 
 .footer-col h3 {
 
     margin: 0;
-
     font-size: 17px;
 }
