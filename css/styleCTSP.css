@@ -415,11 +415,13 @@
 /* ================= FOOTER ================= */
 
 .footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 20px;
-    margin-top: 110px;
+    margin-top: 50px;
 }
 
 .footer-container {
@@ -450,6 +452,7 @@ body {
             rgba(0, 0, 0, 0.5)),
         url('../assets/sachnen.jpg');
     background-size: cover;
+    
 }
 
 * {
