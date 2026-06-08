@@ -595,7 +595,6 @@ body {
 }
 
 /*Mobile*/
-/*Mobile*/
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -675,6 +674,11 @@ body {
         line-height: 2.0;
     }
 
+    body {
+
+    background: #060f21;
+
+}
 
 
 }
