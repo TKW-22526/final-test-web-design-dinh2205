@@ -16,7 +16,6 @@ let defaultProducts = [
         desc:
             "Đắc Nhân Tâm là cuốn sách nổi tiếng của Dale Carnegie giúp người đọc cải thiện kỹ năng giao tiếp và phát triển bản thân. Nội dung sách mang đến nhiều bài học thực tế về cách ứng xử, tạo thiện cảm và xây dựng các mối quan hệ tích cực trong cuộc sống. Với lối viết dễ hiểu cùng nhiều ví dụ gần gũi, cuốn sách giúp người đọc trở nên tự tin hơn trong giao tiếp và công việc.",
 
-        custom: false
     },
 
     {
@@ -35,7 +34,6 @@ let defaultProducts = [
         desc:
             "Người Gác Kệ Sách là tác phẩm nhẹ nhàng và sâu lắng về hành trình chữa lành tâm hồn thông qua những cuốn sách và ký ức. Câu chuyện mang đến cảm giác bình yên, giúp người đọc thư giãn sau những áp lực cuộc sống. Với giọng văn gần gũi và giàu cảm xúc, cuốn sách truyền tải thông điệp về hy vọng, sự cảm thông và giá trị của những điều giản dị xung quanh chúng ta.",
 
-        custom: false
     },
 
     {
@@ -54,7 +52,6 @@ let defaultProducts = [
         desc:
             "Tiệm Giặt Là Nửa Đêm là tác phẩm chữa lành mang màu sắc huyền bí đầy cuốn hút. Câu chuyện diễn ra tại một tiệm giặt là đặc biệt chỉ mở cửa vào ban đêm, nơi những vị khách tìm đến để gột rửa nỗi buồn và ký ức. Với lối kể chuyện nhẹ nhàng, sâu sắc và giàu cảm xúc, cuốn sách giúp người đọc cảm nhận được sự đồng cảm và tìm thấy sự bình yên trong tâm hồn.",
 
-        custom: false
     },
 
     {
@@ -73,7 +70,6 @@ let defaultProducts = [
         desc:
             "Tắt Đèn Nghe Chuyện Cõi Âm là tuyển tập truyện kinh dị hấp dẫn dành cho những ai yêu thích cảm giác hồi hộp và bí ẩn. Mỗi câu chuyện đều được xây dựng với bầu không khí căng thẳng và nhiều tình tiết bất ngờ khiến người đọc khó rời mắt. Cuốn sách không chỉ tạo cảm giác rùng rợn mà còn khai thác sâu tâm lý con người khi đối mặt với nỗi sợ hãi và những điều kỳ bí.",
 
-        custom: false
     },
 
     {
@@ -94,7 +90,6 @@ let defaultProducts = [
         desc:
             "The Dead Zone là tác phẩm nổi bật của Stephen King kết hợp giữa yếu tố kinh dị, tâm lý và khoa học viễn tưởng. Câu chuyện kể về một người đàn ông có khả năng nhìn thấy tương lai sau tai nạn nghiêm trọng. Cuốn sách mang đến bầu không khí hồi hộp, căng thẳng cùng nhiều tình tiết bất ngờ. Đây là lựa chọn phù hợp cho những ai yêu thích những câu chuyện bí ẩn và đầy kịch tính.",
 
-        custom: false
     },
 
     {
@@ -115,7 +110,7 @@ let defaultProducts = [
         desc:
             "Đàn Ông Sao Hỏa Đàn Bà Sao Kim là cuốn sách tâm lý nổi tiếng giúp người đọc hiểu rõ hơn về sự khác biệt giữa nam giới và nữ giới trong suy nghĩ và cảm xúc. Tác giả mang đến nhiều lời khuyên hữu ích giúp cải thiện các mối quan hệ tình cảm và giao tiếp hằng ngày. Với cách viết dễ hiểu cùng ví dụ gần gũi, cuốn sách phù hợp cho những ai muốn xây dựng mối quan hệ bền vững hơn.",
 
-        custom: false
+
     },
 
     {
@@ -136,7 +131,6 @@ let defaultProducts = [
         desc:
             "Không Diệt Không Sinh Đừng Sợ Hãi là tác phẩm nổi tiếng của Thiền sư Thích Nhất Hạnh mang đến những góc nhìn sâu sắc về sự sống và cái chết. Cuốn sách giúp người đọc học cách đối diện với nỗi sợ hãi, sự mất mát và tìm thấy sự bình an trong tâm hồn. Với giọng văn nhẹ nhàng và giàu triết lý, tác phẩm mang lại cảm giác thư thái và chữa lành cho người đọc.",
 
-        custom: false
     },
 
     {
@@ -157,13 +151,12 @@ let defaultProducts = [
         desc:
             "Muôn Kiếp Nhân Sinh là tác phẩm nổi tiếng của Nguyên Phong kể về những câu chuyện luân hồi và nhân quả đầy hấp dẫn. Cuốn sách mở ra góc nhìn mới về cuộc sống, số phận và sự liên kết giữa quá khứ với hiện tại. Không chỉ mang màu sắc tâm linh huyền bí, tác phẩm còn truyền tải nhiều bài học sâu sắc về đạo đức, lòng nhân ái và cách sống tích cực.",
 
-        custom: false
     }
 ];
 
 let products = [];
 let editId = null;
-
+let editMode = false;
 
 
 //Lưu Dữ Liệu
@@ -442,6 +435,39 @@ catch {
 
 
 
+
+
+function HienthiEdit() {
+
+    editMode = !editMode;
+
+    const addBtn = document.getElementById("addBookBtn");
+    const editBtn = document.getElementById("editModeBtn");
+
+    if (editMode) {
+
+        addBtn.style.display = "inline-block";
+
+        editBtn.innerText = "Đóng";
+
+    } else {
+
+        addBtn.style.display = "none";
+
+        editBtn.innerText = "Chỉnh sửa sản phẩm";
+
+    }
+
+    loadAllproducts();
+}
+
+
+
+
+
+
+
+
 //HIỂN THỊ 1 SẢN PHẨM
 
 
@@ -578,19 +604,13 @@ function addproduct(p, container) {
     infoDiv.appendChild(link);
 
 
-    //thêm mới hiện nút
-
-    if (p.custom === true) {
-
-        infoDiv.appendChild(btnBox);
-
-    }
-
-
     myDiv.appendChild(imgDiv);
 
     myDiv.appendChild(infoDiv);
 
+    if (editMode) {
+        infoDiv.appendChild(btnBox);
+    }
     container.appendChild(myDiv);
 
 }
@@ -666,7 +686,6 @@ function editProduct(id) {
 }
 
 
-
 //THÊM và SỬA 
 
 function saveProduct() {
@@ -680,9 +699,9 @@ function saveProduct() {
     const file = document.getElementById("img").files[0];
 
     if (file.size > 500000) {
-    alert("Ảnh quá lớn, vui lòng chọn ảnh dưới 500KB");
-    return;
-}
+        alert("Ảnh quá lớn, vui lòng chọn ảnh dưới 500KB");
+        return;
+    }
 
     if (name === "" || price === "") {
 
@@ -764,7 +783,8 @@ function saveProduct() {
 
             desc: desc,
 
-            custom: true
+            badge: "Mới",
+
 
         };
 

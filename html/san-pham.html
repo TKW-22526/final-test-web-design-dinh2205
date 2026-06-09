@@ -16,7 +16,7 @@
 <body>
 
     <input type="checkbox" id="openLogin" hidden>
-   <header class="header">
+    <header class="header">
 
 
         <div class="logo">
@@ -24,11 +24,11 @@
         </div>
 
 
-           <input type="checkbox" id="menu-on">
-        
-            <label for="menu-on" class="menu-btn">
-                      ☰
-             </label>
+        <input type="checkbox" id="menu-on">
+
+        <label for="menu-on" class="menu-btn">
+            ☰
+        </label>
 
         <nav class="menu">
 
@@ -82,13 +82,20 @@
     <h2 class="section-title">📚 SÁCH MỚI</h2>
 
     <div class="box-product-list">
-        <div id="product-list"> </div>
+        <div id="product-list">  </div>
 
-        <label for="openAddsach" class="btn-watch" onclick="editId = null">
+        <div class="admin-box">
 
-            Thêm Sách
+    <button id="editModeBtn" class="btn-watch" onclick="HienthiEdit()">
+        Chỉnh sửa sản phẩm
+    </button>
 
-        </label>
+    <label for="openAddsach" id="addBookBtn" class="btn-watch">
+        Thêm sách
+    </label>
+
+</div>
+    
 
     </div>
 

@@ -350,9 +350,9 @@ body {
 .btn-watch {
     display: block;
     width: fit-content;
-
-    background: #facc15;
-    color: black;
+    border: none;
+    background: #078843;
+    color: rgb(255, 255, 255);
 
     padding: 10px 20px;
     border-radius: 8px;
@@ -367,8 +367,9 @@ body {
 }
 
 .btn-watch:hover {
-    background: #f5b30e;
+    background: #b01f05;
     transform: scale(1.05);
+
 }
 
 .btn-watchh {
@@ -606,8 +607,20 @@ body {
 #menu-on {
     display:none;
 }
+.admin-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
 
-
+#addBookBtn {
+    display: none;
+    background: #05663c;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+}
 
 @media (max-width:768px){
 
