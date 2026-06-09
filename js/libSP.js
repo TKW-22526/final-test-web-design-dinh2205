@@ -60,7 +60,7 @@ let defaultProducts = [
     {
         id: 4,
 
-        name: "Tắt Đèn Nghe Chuyện Cố Ám",
+        name: "Tắt Đèn Nghe Chuyện Cõi Âm",
 
         price: "88000",
 
@@ -71,7 +71,7 @@ let defaultProducts = [
         productLink: "chi-tiet.html",
 
         desc:
-            "Tắt Đèn Nghe Chuyện Cố Ám là tuyển tập truyện kinh dị hấp dẫn dành cho những ai yêu thích cảm giác hồi hộp và bí ẩn. Mỗi câu chuyện đều được xây dựng với bầu không khí căng thẳng và nhiều tình tiết bất ngờ khiến người đọc khó rời mắt. Cuốn sách không chỉ tạo cảm giác rùng rợn mà còn khai thác sâu tâm lý con người khi đối mặt với nỗi sợ hãi và những điều kỳ bí.",
+            "Tắt Đèn Nghe Chuyện Cõi Âm là tuyển tập truyện kinh dị hấp dẫn dành cho những ai yêu thích cảm giác hồi hộp và bí ẩn. Mỗi câu chuyện đều được xây dựng với bầu không khí căng thẳng và nhiều tình tiết bất ngờ khiến người đọc khó rời mắt. Cuốn sách không chỉ tạo cảm giác rùng rợn mà còn khai thác sâu tâm lý con người khi đối mặt với nỗi sợ hãi và những điều kỳ bí.",
 
         custom: false
     },
